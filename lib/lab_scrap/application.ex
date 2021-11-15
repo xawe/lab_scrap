@@ -14,7 +14,9 @@ defmodule LabScrap.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: LabScrap.PubSub},
       # Start the Endpoint (http/https)
-      LabScrapWeb.Endpoint
+      LabScrapWeb.Endpoint,
+      {LabScrap.Supervisors.CrawlerSupervisor, []},
+      {LabScrap.Agents.ResultStore, []}
       # Start a worker by calling: LabScrap.Worker.start_link(arg)
       # {LabScrap.Worker, arg}
     ]

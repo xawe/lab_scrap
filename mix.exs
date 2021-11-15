@@ -44,7 +44,11 @@ defmodule LabScrap.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:httpoison, "~> 1.8"},
+      {:floki, "~> 0.31.0"},
+      {:earmark, "~> 1.4", only: :dev},
+      {:ex_doc, "~> 0.25.3", only: :dev}
     ]
   end
 

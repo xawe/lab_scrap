@@ -8,7 +8,9 @@
 use Mix.Config
 
 config :lab_scrap,
-  ecto_repos: [LabScrap.Repo]
+  ecto_repos: [LabScrap.Repo],
+  timeout: 40_000,
+  kill_process: 10_000
 
 # Configures the endpoint
 config :lab_scrap, LabScrapWeb.Endpoint,
