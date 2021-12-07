@@ -15,7 +15,7 @@ config :lab_scrap,
 # Configures the endpoint
 config :lab_scrap, LabScrapWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "EO7FQUlUrga7+A/REarOqwHSUrpftngArEskMntGXZuzeR65yZzRagG32/wCgJV2",
+  #secret_key_base: "EO7FQUlUrga7+A/REarOqwHSUrpftngArEskMntGXZuzeR65yZzRagG32/wCgJV2",
   render_errors: [view: LabScrapWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: LabScrap.PubSub,
   live_view: [signing_salt: "GL71hOYK"]
@@ -24,6 +24,17 @@ config :lab_scrap, LabScrapWeb.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
+  config :esbuild,
+  version: "0.12.18",
+  default: [
+    args:
+      ~w(js/app.js --bundle --target=es2016 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+    cd: Path.expand("../assets", __DIR__),
+    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ]
+
+config :swoosh, :api_client, false
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

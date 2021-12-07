@@ -130,6 +130,28 @@ Os únicos requisitos para isso são:
 
 Execute `mix docs` para gerar a documentação no diretório `doc` do projeto
 
+
+## Docker
+
+- exportar as variaveis
+
+`export POOL_SIZE=2`
+
+`export PORT=4001`
+
+`export DATABASE_URL=ecto://postgres@localhost/lab_scrap_prod`
+
+`export SECRET_KEY_BASE=$(mix phx.gen.secret)`
+
+
+- Para criar a imagem docker da aplicação.
+
+`docker image build -t elixir/lab_scrap .`
+
+- Para criar o container, pegando informações das variáveis de ambiente pré configuradas
+
+`docker container run -dp $PORT:$PORT -e POOL_SIZE -e PORT -e DATABASE_URL -e SECRET_KEY_BASE --network elixir-network --name lab_scrap elixir/lab_scrap` 
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

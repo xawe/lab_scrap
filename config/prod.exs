@@ -1,5 +1,14 @@
 use Mix.Config
 
+
+# config :lab_scrap, LabScrap.Repo,
+#   username: "postgres",
+#   password: "postgres",
+#   database: "lab_scrap_dev",
+#   hostname: "localhost",
+#   show_sensitive_data_on_connection_error: true,
+#   pool_size: 10
+
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
@@ -52,4 +61,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
+#import_config "prod.secret.exs"
