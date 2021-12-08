@@ -139,7 +139,7 @@ Execute `mix docs` para gerar a documentação no diretório `doc` do projeto
 
 `export PORT=4001`
 
-`export DATABASE_URL=ecto://postgres@localhost/lab_scrap_prod`
+`export DATABASE_URL=ecto://postgres:postgres@localhost/lab_scrap_prod`
 
 `export SECRET_KEY_BASE=$(mix phx.gen.secret)`
 
