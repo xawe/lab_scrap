@@ -17,6 +17,10 @@ defmodule LabScrapWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    get "/index", CrawlerController, :index
+    get "/run_1x1", CrawlerController, :run_1x1
+
   end
 
   # Other scopes may use custom stacks.

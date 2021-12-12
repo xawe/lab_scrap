@@ -3,6 +3,14 @@
   <p>Peace of mind from prototype to production</p>
 </section>
 
+<section>
+  <div class="action-boxes">
+    <div>
+      <%= link "Go to Crawler", to: Routes.crawler_path(@conn, :index) %>
+    </div>
+  </dv>
+</section>
+
 <section class="row">
   <article class="column">
     <h2>Resources</h2>

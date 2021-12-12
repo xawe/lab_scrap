@@ -1,0 +1,6 @@
+<section>
+  <div class="card">
+    <h1>Crawler Lab 2</h1>
+    <%= link("Run 1x1", to: "/run_1x1", method: :get, class: "btn") %>
+</div>
+</section>

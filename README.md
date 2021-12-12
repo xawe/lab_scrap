@@ -131,6 +131,18 @@ Os únicos requisitos para isso são:
 Execute `mix docs` para gerar a documentação no diretório `doc` do projeto
 
 
+## Relase
+
+- Preparando a execução
+
+ `mix deps.get --only prod`
+
+ `MIX_ENV=prod mix compile`
+
+ `MIX_ENV=prod mix assets.deploy`
+
+ `MIX_ENV=prod mix release`
+
 ## Docker
 
 - exportar as variaveis

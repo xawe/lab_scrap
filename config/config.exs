@@ -10,7 +10,7 @@ use Mix.Config
 config :lab_scrap,
   ecto_repos: [LabScrap.Repo],
   timeout: 40_000,
-  #kill_process: 10_000,
+  kill_process: 10_000,
   show_sensitive_data_on_connection_error: true
 
 # Configures the endpoint
