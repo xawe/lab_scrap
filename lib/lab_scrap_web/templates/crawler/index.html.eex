@@ -2,5 +2,5 @@
   <div class="card">
     <h1>Crawler Lab</h1>
     <%= button("Run 1x1", to: "/run_1x1", method: :get, class: "btn") %>
-</div>
+  </div>
 </section>

@@ -12,4 +12,10 @@ defmodule LabScrapWeb.CrawlerController do
     render(conn, "crawler.html")
   end
 
+  def run_pool_10(conn, _params) do
+    IO.puts("Running Crawler Pool 10")
+    LabScrap.ParallelCrawler.run_pool(10)
+    render(conn, "crawler.html")
+  end
+
 end

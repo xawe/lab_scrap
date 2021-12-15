@@ -20,6 +20,7 @@ defmodule LabScrapWeb.Router do
 
     get "/index", CrawlerController, :index
     get "/run_1x1", CrawlerController, :run_1x1
+    get "/run_pool_10", CrawlerController, :run_pool_10
 
   end
 
